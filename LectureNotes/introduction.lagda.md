@@ -336,7 +336,7 @@ In the next few handouts, we are going to look at simpler examples first, to pre
 
 ## Propositions as types
 
-The Curry-Howard interpretation of logic, after Haskell Curry and William Howard, interprets logical statements, also known as propositions, as *types*. Per Martin-Löf extended this interpretation of propositions as types with equality, by introducing the identity type.
+The Curry-Howard interpretation of logic, after Haskell Curry and William Howard, interprets logical statements, also known as propositions, as *types*. Per Martin-Löf extended this interpretation of propositions as types with equality, by introducing the identity type discussed above.
 
 An incomplete table of the Curry-Howard-Martin-Loef interpretation of logical propositions is the following:
 
@@ -374,7 +374,7 @@ This will be the subject of future handouts.
 
 ## Proofs as functional programs
 
-Notice that we didn't write a *proof* in the usual mathematical sense of the statement
+Notice that we didn't write a *proof*, in the usual mathematical sense, of the statement
 
 > for any type `A` and any list `xs`, we have that `rev xs = reverse xs`.
 
