@@ -11,7 +11,7 @@ have learned Haskell before attending this module.
 
 There are three main distinguishing features of Agda compared to Haskell.
 
- 1. Ag`>da has a richer set of types, including *dependent types*.
+ 1. Agda has a richer set of types, including *dependent types*.
 
  1. You can write Agda code to *prove* properties of your Agda definitions.
 
