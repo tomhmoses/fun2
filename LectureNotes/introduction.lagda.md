@@ -358,15 +358,15 @@ or, using logical symbolism,
 
 For more complex examples of reasoning about programs, we need to complete the table:
 
-| Logic         | Type                                  |
-| ---           | ---                                   |
-| not A         | ?                                     |
-| A and B       | ?                                     |
-| A or B        | ?                                     |
-| A implies B   | function type A → B                   |
-| ∀ x : A, B x  | dependent function type (x : A) → B x |
-| ∃ x : A, B x  | ?                                     |
-| equality      | identity type `_≡_`                   |
+| Logic         | English                    | Type                                  |
+| ---           | ---                        | ---                                   |
+| ¬ A           | not A                      | ?                                     |
+| A ∧ B         | A and B                    | ?                                     |
+| A ∨ B         | A or B                     | ?                                     |
+| A → B         | A implies B                | function type A → B                   |
+| ∀ x : A, B x  | for all x:A, B x           | dependent function type (x : A) → B x |
+| ∃ x : A, B x  | there is x:A such that B x | ?                                     |
+| x = y         | x equals y                 |identity type `_≡_`                    |
 
 This will be the subject of future handouts.
 
