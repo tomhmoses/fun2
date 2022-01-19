@@ -272,8 +272,7 @@ In order to do that, we first define three auxiliary programs with the following
 
 ++assoc : {A : Type} (xs ys zs : List A) → (xs ++ ys) ++ zs ≡ xs ++ (ys ++ zs)
 
-rev-append-spec : {A : Type}
-                  (xs ys : List A)
+rev-append-spec : {A : Type} (xs ys : List A)
                 → rev-append xs ys ≡ reverse xs ++ ys
 ```
 
