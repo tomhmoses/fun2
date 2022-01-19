@@ -175,7 +175,7 @@ data Vector (A : Set) : ℕ → Type where
  []   : Vector A 0
  _::_ : {n : ℕ} → A → Vector A n → Vector A (suc n)
 ```
-This is called a *dependent type* because it is a type that depends on elements `n` of another type, namely `ℕ`.
+This is called a *dependent type* because it is a type that depends on *elements* `n` of another type, namely `ℕ`.
 
 In Agda, we can't define the `head` and `tail` functions on lists, because types don't have
 `undefined` elements like in Haskell, which would be needed for the head and tail of the empty list. Vectors solve this problem:
