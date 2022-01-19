@@ -390,7 +390,7 @@ The computer checks your proof for you. A proof is nothing but a functional prog
 
 ## Rigorous reasoning about programs
 
-What if you are not interested in *proving* correctness in the logical sense of proof? You will still need to make sure your programs are correct, one way or another, if you don't want to be fired or sued or lose clients or kill somebody because you programmed a traffic light incorrectly. What this module offers you is a rigorous way to reason about programs. Even if you may not, in practice, prove programs correct using Agda if you work in industry, we hope that by completing this module you will learn what is involved in thinking about programs and arguing that they are correct or satisfy certain desirable properties and don't have certain undesirable properties.
+What if you are not interested in *proving* correctness in the logical sense of proof? You will still need to make sure your programs are correct, one way or another, if you don't want to be fired or sued or lose clients or kill somebody because you programmed a traffic light incorrectly. What this module offers you is a rigorous way to reason about programs. Even if you may not, in practice, prove programs correct using Agda if you work in industry, we intend that by completing this module you will learn what is involved in thinking about programs and arguing that they are correct or satisfy certain desirable properties and don't have certain undesirable properties.
 
 ## Precise types
 
@@ -399,6 +399,8 @@ So far we have emphasized reasoning about programs, and in particular arguing th
 But there is another way logic is useful for programming. Very often, in all programming languages, and in Haskell in particular, we work with types that contain "junk", and we have to be very careful to ignore junk when it doesn't matter, and take it into account when it does matter.
 
 For example, in Haskell we normally work with the type of *all* binary trees, even in situations where we are only interested in *binary search trees*. Using logical statements, we can define a type which has all binary search trees and no junk. In this example, logic is used as *part* of the programming activity, rather than just as a sanity check *after* the programs have been written.
+
+Another example is monads. In Haskell we just write the types of the monad operations. But monads have to satisfy certain laws to really be monads, and this is important. In Agda we can write the monad laws, and, when we define a monad, ensure that it is a monad by writing suitable Agda code. There are many more examples like that.
 
 One way to write better programs is to work with more precise types. This is one important thing that we will explore this in this module.
 
