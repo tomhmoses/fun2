@@ -266,12 +266,15 @@ Recall that we defined an easy to understand reversal function `reverse` and a f
 ```
 rev-correct : {A : Type} (xs : List A) → rev xs ≡ reverse xs
 ```
-In order to do that, we first define auxiliary programs with the following types:
+In order to do that, we first define three auxiliary programs with the following types:
 ```
 []-right-neutral : {X : Type} (xs : List X) → xs ++ [] ≡ xs
 
 ++assoc : {A : Type} (xs ys zs : List A) → (xs ++ ys) ++ zs ≡ xs ++ (ys ++ zs)
 
+rev-append-spec : {A : Type}
+                  (xs ys : List A)
+                → rev-append xs ys ≡ reverse xs ++ ys
 ```
 
 Here are the definitions of the functions, but we don't expect you to be able to follow the details in this introductory handout:
@@ -289,7 +292,6 @@ Here are the definitions of the functions, but we don't expect you to be able to
   II : (x :: xs) ++ [] ≡ x :: xs
   II = I
 
-
 ++assoc []       ys zs = refl (ys ++ zs)
 ++assoc (x :: xs) ys zs = II
   where
@@ -302,9 +304,6 @@ Here are the definitions of the functions, but we don't expect you to be able to
     II : ((x :: xs) ++ ys) ++ zs ≡ (x :: xs) ++ (ys ++ zs)
     II = I
 
-rev-append-spec : {A : Type}
-                  (xs ys : List A)
-                → rev-append xs ys ≡ reverse xs ++ ys
 rev-append-spec []       ys = refl ys
 rev-append-spec (x :: xs) ys = II
  where
