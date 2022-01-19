@@ -250,7 +250,7 @@ back : (x y : ℕ) → x ≡ y → x ≣ y
 back x x (refl x) = ℕ-refl x
 
 forth : (x y : ℕ) → x ≣ y → x ≡ y
-forth 0    0  ⋆         = refl 0
+forth 0       0       ⋆ = refl 0
 forth (suc x) (suc y) p = I
  where
   IH : x ≡ y
