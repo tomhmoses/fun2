@@ -382,7 +382,7 @@ We instead wrote a *program* of type
 
 > {A : Type} (xs : List A) → rev xs ≡ reverse xs
 
-This is precisely the point of "propositions as types": proof become functional programs. You may not know a lot (of even anything) about proofs, but you certainly know a lot about functional programming. The interpretation of logical statements as types allows you to apply your expertise as a functional programmer to write (rigorous) proofs checked by the computer.
+This is precisely the point of "propositions as types": proofs become functional programs. You may not know a lot (of even anything) about proofs, but you certainly know a lot about functional programming. The interpretation of logical statements as types allows you to apply your expertise as a functional programmer to write (rigorous) proofs checked by the computer.
 
 > If your Agda program compiles without errors, your proof, written as a program, is correct!
 
@@ -398,16 +398,18 @@ So far we have emphasized reasoning about programs, and in particular arguing th
 
 But there is another way logic is useful for programming. Very often, in all programming languages, and in Haskell in particular, we work with types that contain "junk", and we have to be very careful to ignore junk when it doesn't matter, and take it into account when it does matter.
 
-For example, in Haskell we normally work with the type of *all* binary trees, even in situations where we are interested in *binary search trees* only. Using logical statements, we can define a type which has all binary search trees and no junk. In this example, logic as part of the programming activity, rather than just as a sanity check *after* the programs have been written.
+For example, in Haskell we normally work with the type of *all* binary trees, even in situations where we are interested in *binary search trees* only. Using logical statements, we can define a type which has all binary search trees and no junk. In this example, logic is used as *part* of the programming activity, rather than just as a sanity check *after* the programs have been written.
 
 One way to write better programs is to work with more precise types. This is one important thing that we will explore this in this module.
 
 ## Do people in industry use tools such as Agda?
 
-Yes. A lot. [[Give lots of examples via a link that I have to find.]]
+Yes, definitely. A lot. There are well-paid jobs in industry in software verification. [[Give lots of examples via a link that I have to find.]]
 
 ## Are we advocating that all programmers should switch to Agda?
 
-No, of course not. You shouldn't do that except in special situations. What we are saying is that you should learn to reason about programs, and we are using Agda for that purpose, in particular because it allows to reason about programs and record the reasoning in Agda itself, and because it allows to define more precise types by the availability of logic at the programming level, via the proposition-as-types and proofs-as-programs understanding of logic.
+No, of course not. You shouldn't do that except in special situations. What we are saying is that you should learn to reason about programs, and we are using Agda for that purpose, in particular because it allows to reason about programs and record the reasoning in Agda itself, and because it allows to define more precise types by the availability of logic at the programming level, via the proposition-as-types and proofs-as-programs understanding of logic. But the ideas discussed in this module to reason about programs can be applied beyond Agda and beyond functional programming, and they have. [[Do we give e.g. the example of a Coq-verified compiler for a subset of C used in avionics?]]
 
 ## Further reading
+
+[[Add links to things that are linked in the Agda Wiki.]]
