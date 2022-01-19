@@ -338,11 +338,11 @@ The Curry-Howard interpretation of logic, after Haskell Curry and William Howard
 
 An incomplete table of the Curry-Howard-Martin-Loef interpretation of logical propositions is the following:
 
-| Logical proposition | Type                                  |
-| ---                 | ---                                   |
-| A implies B         | function type A → B                   |
-| ∀ x : A, B x        | dependent function type (x : A) → B x |
-| equality            | identity type `_≡_`                   |
+| proposition  | Type                                  |
+| ---          | ---                                   |
+| A implies B  | function type A → B                   |
+| ∀ x : A, B x | dependent function type (x : A) → B x |
+| equality     | identity type `_≡_`                   |
 
 This fragment of logic was enough for us to be able to write the correctness of `rev` as the type
 
@@ -358,15 +358,15 @@ or, using logical symbolism,
 
 For more complex examples of reasoning about programs, we need to complete the table:
 
-| Logic         | English                    | Type                                  |
-| ---           | ---                        | ---                                   |
-| ¬ A           | not A                      | ?                                     |
-| A ∧ B         | A and B                    | ?                                     |
-| A ∨ B         | A or B                     | ?                                     |
-| A → B         | A implies B                | function type A → B                   |
-| ∀ x : A, B x  | for all x:A, B x           | dependent function type (x : A) → B x |
-| ∃ x : A, B x  | there is x:A such that B x | ?                                     |
-| x = y         | x equals y                 |identity type `_≡_`                    |
+| Logic        | English                    | Type                                  |
+| ---          | ---                        | ---                                   |
+| ¬ A          | not A                      | ?                                     |
+| A ∧ B        | A and B                    | ?                                     |
+| A ∨ B        | A or B                     | ?                                     |
+| A → B        | A implies B                | function type A → B                   |
+| ∀ x : A, B x | for all x:A, B x           | dependent function type (x : A) → B x |
+| ∃ x : A, B x | there is x:A such that B x | ?                                     |
+| x = y        | x equals y                 |identity type x ≡ y                    |
 
 This will be the subject of future handouts.
 
