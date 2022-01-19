@@ -370,7 +370,7 @@ For more complex examples of reasoning about programs, we need to complete the t
 | ∃ x : A, B x  | ?                                     |
 | equality      | identity type `_≡_`                   |
 
-This will be the subject of future handouts. The Curry-Howard interpretation is also known as "propositions as types", where "proposition" is another name for logical statement.
+This will be the subject of future handouts.
 
 ## Proofs as functional programs
 
