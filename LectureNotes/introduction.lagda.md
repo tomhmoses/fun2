@@ -338,7 +338,7 @@ The Curry-Howard interpretation of logic, after Haskell Curry and William Howard
 
 An incomplete table of the Curry-Howard-Martin-Loef interpretation of logical propositions is the following:
 
-| proposition  | Type                                  |
+| Proposition  | Type                                  |
 | ---          | ---                                   |
 | A implies B  | function type A → B                   |
 | ∀ x : A, B x | dependent function type (x : A) → B x |
@@ -356,17 +356,17 @@ or, using logical symbolism,
 
 > `∀ A : Type, ∀ xs : List A, rev xs = reverse xs`.
 
-For more complex examples of reasoning about programs, we need to complete the table:
+For more complex examples of reasoning about programs, we need to complete the following table:
 
-| Logic        | English                    | Type                                  |
-| ---          | ---                        | ---                                   |
-| ¬ A          | not A                      | ?                                     |
-| A ∧ B        | A and B                    | ?                                     |
-| A ∨ B        | A or B                     | ?                                     |
-| A → B        | A implies B                | function type A → B                   |
-| ∀ x : A, B x | for all x:A, B x           | dependent function type (x : A) → B x |
-| ∃ x : A, B x | there is x:A such that B x | ?                                     |
-| x = y        | x equals y                 |identity type x ≡ y                    |
+| Logic        | English                    | Type          |
+| ---          | ---                        | ---           |
+| ¬ A          | not A                      | ?             |
+| A ∧ B        | A and B                    | ?             |
+| A ∨ B        | A or B                     | ?             |
+| A → B        | A implies B                | A → B         |
+| ∀ x : A, B x | for all x:A, B x           | (x : A) → B x |
+| ∃ x : A, B x | there is x:A such that B x | ?             |
+| x = y        | x equals y                 | x ≡ y         |
 
 This will be the subject of future handouts.
 
