@@ -1,5 +1,5 @@
 <!--
-```
+```agda
 {-# OPTIONS --without-K --safe #-}
 ```
 -->
@@ -17,7 +17,7 @@ There are three main distinguishing features of Agda compared to Haskell.
 
     More importantly, you can *write* such properties in Agda.
 
- 1. In Agda all computations terminate.
+ 1. In Agda all computations must terminate.
 
 ## Plan of this introductory handout
 
@@ -29,7 +29,7 @@ There are three main distinguishing features of Agda compared to Haskell.
 
  1. After giving the examples, we will explain them.
 
-The idea of this handout is *not* to fully explain the examples below, but instead to give you a *flavour* of what Agda is like. The full explanation of what follows, and more, is provided in other handouts.
+The idea of this handout is *not* to fully explain the examples below, but instead to give you a *flavour* of what Agda is like. The full explanation of what follows, and more, is provided in future handouts.
 
 ## Main ideas and questions
 
@@ -39,14 +39,14 @@ How can we think and reason about programs? How can we write better programs?
 
 <!--
 In Agda, types are called sets by default. We prefer to stick to "Type".
-```
+```agda
 Type = Set
 ```
 -->
 
 We begin with some examples you are familiar from Haskell. Notice that the syntax is similar but slightly different.
 
-```
+```agda
 data Bool : Type where
  true false : Bool
 
@@ -90,7 +90,7 @@ We pronounce `suc` as "successor".
 
 ## Examples definitions using the above types in Agda
 
-```
+```agda
 not : Bool → Bool
 not true  = false
 not false = true
@@ -127,8 +127,8 @@ sample-list₀ = 1 :: 2 :: 3 :: []
 sample-list₁ : List Bool
 sample-list₁ = true || false && true :: false :: true :: true :: []
 
-list₂ : List (Either Bool ℕ)
-list₂ = left true :: right 2 :: right 17 :: left false :: []
+sample-list₂ : List (Either Bool ℕ)
+sample-list₂ = left true :: right 2 :: right 17 :: left false :: []
 
 length : {A : Type} → List A → ℕ
 length []        = 0
@@ -148,7 +148,7 @@ map f (x :: xs) = f x :: map f xs
 [ x ] = x :: []
 
 reverse : {A : Type} → List A → List A
-reverse [] = []
+reverse []        = []
 reverse (x :: xs) = reverse xs ++ [ x ]
 
 rev-append : {A : Type} → List A → List A → List A
@@ -170,8 +170,8 @@ xs` and `rev xs` are equal. We will do that later.
 
 Sometimes we may wish to consider lists over a type `A` of a given length `n : ℕ`. The elements of this type, written `Vector A n`, are called *vectors*, and the type can be defined as follows:
 
-```
-data Vector (A : Set) : ℕ → Type where
+```agda
+data Vector (A : Type) : ℕ → Type where
  []   : Vector A 0
  _::_ : {n : ℕ} → A → Vector A n → Vector A (suc n)
 ```
@@ -180,7 +180,7 @@ This is called a *dependent type* because it is a type that depends on *elements
 In Agda, we can't define the `head` and `tail` functions on lists, because types don't have
 `undefined` elements like in Haskell, which would be needed for the head and tail of the empty list. Vectors solve this problem:
 
-```
+```agda
 head : {A : Type} {n : ℕ} → Vector A (suc n) → A
 head (x :: xs) = x
 
@@ -194,17 +194,17 @@ Dependent types are pervasive in Agda.
 ## The empty type and the unit type
 
 A type with no elements can be defined as follows:
-```
+```agda
 data 𝟘 : Type where
 ```
 We will also need the type with precisely one element, which we define as follows:
-```
+```agda
 data 𝟙 : Type where
  ⋆ : 𝟙
 ```
 
 Here is an example of a dependent type defined using the above types:
-```
+```agda
 _≣_ : ℕ → ℕ → Type
 0     ≣ 0     = 𝟙
 0     ≣ suc y = 𝟘
@@ -215,7 +215,7 @@ infix 0 _≣_
 ```
 The idea of the above definition is that `x ≣ y` is a type which is either empty, if `x` and `y` are different, or has precisely one element, if `x` and `y` are the same natural number.
 The following definition says that for any natural number `x` we can find an element of the type `x ≣ x`.
-```
+```agda
 ℕ-refl : (x : ℕ) → x ≣ x
 ℕ-refl 0       = ⋆
 ℕ-refl (suc x) = ℕ-refl x
@@ -224,14 +224,14 @@ The following definition says that for any natural number `x` we can find an ele
 
 It is possible to generalize the above definition
 for any type in place of that of natural numbers as follows:
-```
+```agda
 data _≡_ {A : Type} : A → A → Type where
  refl : (x : A) → x ≡ x
 
 infix 0 _≡_
 ```
 Here are some functions we can define with the identity type:
-```
+```agda
 trans : {A : Type} {x y z : A} → x ≡ y → y ≡ z → x ≡ z
 trans (refl x) (refl x) = refl x
 
@@ -245,7 +245,7 @@ ap f (refl x) = refl (f x)
 The identity type is a little bit subtle and there is a lot to say about it.
 For the moment, let's convince ourselves that we can convert back and forth between the types `x ≡ y` and `x ≣ y`, in the case that `A` is the type of natural numbers, as follows:
 
-```
+```agda
 back : (x y : ℕ) → x ≡ y → x ≣ y
 back x x (refl x) = ℕ-refl x
 
@@ -263,11 +263,11 @@ forth (suc x) (suc y) p = I
 ## List reversal revisited
 
 Recall that we defined an easy to understand reversal function `reverse` and a faster, but more difficult to understand function `rev`. To convince ourselves that `rev` is correct, we can write an Agda function with the following type:
-```
+```agda
 rev-correct : {A : Type} (xs : List A) → rev xs ≡ reverse xs
 ```
 In order to do that, we first define three auxiliary programs with the following types:
-```
+```agda
 []-right-neutral : {X : Type} (xs : List X) → xs ++ [] ≡ xs
 
 ++assoc : {A : Type} (xs ys zs : List A) → (xs ++ ys) ++ zs ≡ xs ++ (ys ++ zs)
@@ -278,7 +278,7 @@ rev-append-spec : {A : Type} (xs ys : List A)
 
 Here are the definitions of the functions, but we don't expect you to be able to follow the details in this introductory handout:
 
-```
+```agda
 []-right-neutral []        = refl []
 []-right-neutral (x :: xs) = II
  where
@@ -334,9 +334,9 @@ In the next few handouts, we are going to look at simpler examples first, to pre
 
 ## Propositions as types
 
-The Curry-Howard interpretation of logic, after Haskell Curry and William Howard, interprets logical statements, also known as propositions, as *types*. Per Martin-Löf extended this interpretation of propositions as types with equality, by introducing the identity type discussed above.
+The Curry--Howard interpretation of logic, after [Haskell Curry](https://en.wikipedia.org/wiki/Haskell_Curry) and [William Howard](https://en.wikipedia.org/wiki/William_Alvin_Howard), interprets logical statements, also known as propositions, as *types*. [Per Martin-Löf](https://en.wikipedia.org/wiki/Per_Martin-L%C3%B6f) extended this interpretation of propositions as types with equality, by introducing the identity type discussed above.
 
-An incomplete table of the Curry-Howard-Martin-Loef interpretation of logical propositions is the following:
+An incomplete table of the Curry--Howard--Martin-Löf interpretation of logical propositions is the following:
 
 | Proposition  | Type                                  |
 | ---          | ---                                   |
@@ -346,7 +346,7 @@ An incomplete table of the Curry-Howard-Martin-Loef interpretation of logical pr
 
 This fragment of logic was enough for us to be able to write the correctness of `rev` as the type
 
-> {A : Type} (xs : List A) → rev xs ≡ reverse xs
+> `{A : Type} (xs : List A) → rev xs ≡ reverse xs`
 
 which we can read as
 
@@ -400,7 +400,7 @@ For example, in Haskell we normally work with the type of *all* binary trees, ev
 
 Another example is monads. In Haskell we just write the types of the monad operations. But monads have to satisfy certain laws to really be monads, and this is important. In Agda we can write the monad laws, and, when we define a monad, ensure that it is a monad by writing suitable Agda code. There are many more examples like that.
 
-One way to write better programs is to work with more precise types. This is one important thing that we will explore this in this module.
+One way to write better programs is to work with more precise types. This is one important thing that we will explore in this module.
 
 ## Do people in industry use tools such as Agda?
 
