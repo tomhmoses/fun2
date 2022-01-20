@@ -7,7 +7,7 @@
 
 In this module you will learn the functional programming language
 [Agda](https://agda.readthedocs.io/en/latest/). We assume that you
-have learned Haskell before attending this module.
+have learned Haskell before attending this module (the prerequisites also include data structures and algorithms, theories of computation, and mathematical and logical foundations of computer science).
 
 There are three main distinguishing features of Agda compared to Haskell.
 
@@ -20,6 +20,8 @@ There are three main distinguishing features of Agda compared to Haskell.
  1. In Agda all computations must terminate.
 
 ## Plan of this introductory handout
+
+In this handout we give a taste of Agda, anticipating things that we will learn in future handouts.
 
  1. We will show you some examples of Agda code.
 
@@ -34,6 +36,10 @@ The idea of this handout is *not* to fully explain the examples below, but inste
 ## Main ideas and questions
 
 How can we think and reason about programs? How can we write better programs?
+
+## This handout is both an Agda file and a Markdown file
+
+The file for this handout is `introduction.lagda.md`. It is in [Markdown](https://en.wikipedia.org/wiki/Markdown) format and includes Agda code that can be understood directly by Agda. See the [Literate Programming](https://agda.readthedocs.io/en/v2.6.2.1/tools/literate-programming.html) section of the [Agda documentation](https://agda.readthedocs.io/en/v2.6.2.1/index.html).
 
 ## Initial examples of types in Agda
 
@@ -50,12 +56,6 @@ We begin with some examples you are familiar from Haskell. Notice that the synta
 data Bool : Type where
  true false : Bool
 
-data ℕ : Type where
- zero : ℕ
- suc  : ℕ → ℕ
-
-{-# BUILTIN NATURAL ℕ #-}
-
 data Maybe (A : Type) : Type where
  nothing : Maybe A
  just    : A → Maybe A
@@ -63,6 +63,12 @@ data Maybe (A : Type) : Type where
 data Either (A B : Type) : Type where
  left  : A → Either A B
  right : B → Either A B
+
+data ℕ : Type where
+ zero : ℕ
+ suc  : ℕ → ℕ
+
+{-# BUILTIN NATURAL ℕ #-}
 
 data List (A : Type) : Type where
  []   : List A
@@ -213,7 +219,7 @@ suc x ≣ suc y = x ≣ y
 
 infix 0 _≣_
 ```
-The idea of the above definition is that `x ≣ y` is a type which is either empty, if `x` and `y` are different, or has precisely one element, if `x` and `y` are the same natural number.
+The idea of the above definition is that `x ≣ y` is a type which either has precisely one element, if `x` and `y` are the same natural number, or else is empty, if `x` and `y` are different.
 The following definition says that for any natural number `x` we can find an element of the type `x ≣ x`.
 ```agda
 ℕ-refl : (x : ℕ) → x ≣ x
@@ -283,7 +289,7 @@ Here are the definitions of the functions, but we don't expect you to be able to
 []-right-neutral (x :: xs) = II
  where
   IH : xs ++ [] ≡ xs
-  IH = ([]-right-neutral xs)
+  IH = []-right-neutral xs
 
   I : x :: (xs ++ []) ≡ x :: xs
   I = ap (x ::_) IH
@@ -294,16 +300,16 @@ Here are the definitions of the functions, but we don't expect you to be able to
 ++assoc []       ys zs = refl (ys ++ zs)
 ++assoc (x :: xs) ys zs = II
   where
-    IH : xs ++ ys ++ zs ≡ xs ++ (ys ++ zs)
+    IH : (xs ++ ys) ++ zs ≡ xs ++ (ys ++ zs)
     IH = ++assoc xs ys zs
 
-    I : x :: (xs ++ ys ++ zs) ≡ x :: (xs ++ (ys ++ zs))
+    I : x :: ((xs ++ ys) ++ zs) ≡ x :: (xs ++ (ys ++ zs))
     I = ap (x ::_) IH
 
     II : ((x :: xs) ++ ys) ++ zs ≡ (x :: xs) ++ (ys ++ zs)
     II = I
 
-rev-append-spec []       ys = refl ys
+rev-append-spec []        ys = refl ys
 rev-append-spec (x :: xs) ys = II
  where
   IH : rev-append xs (x :: ys) ≡ reverse xs ++ (x :: ys)
@@ -334,7 +340,7 @@ In the next few handouts, we are going to look at simpler examples first, to pre
 
 ## Propositions as types
 
-The Curry--Howard interpretation of logic, after [Haskell Curry](https://en.wikipedia.org/wiki/Haskell_Curry) and [William Howard](https://en.wikipedia.org/wiki/William_Alvin_Howard), interprets logical statements, also known as propositions, as *types*. [Per Martin-Löf](https://en.wikipedia.org/wiki/Per_Martin-L%C3%B6f) extended this interpretation of propositions as types with equality, by introducing the identity type discussed above.
+The [Curry--Howard interpretation of logic](https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence), after [Haskell Curry](https://en.wikipedia.org/wiki/Haskell_Curry) and [William Howard](https://en.wikipedia.org/wiki/William_Alvin_Howard), interprets logical statements, also known as propositions, as *types*. [Per Martin-Löf](https://en.wikipedia.org/wiki/Per_Martin-L%C3%B6f) extended this interpretation of propositions as types with equality, by introducing the identity type discussed above.
 
 An incomplete table of the Curry--Howard--Martin-Löf interpretation of logical propositions is the following:
 
@@ -404,12 +410,73 @@ One way to write better programs is to work with more precise types. This is one
 
 ## Do people in industry use tools such as Agda?
 
-Yes, definitely. A lot. There are well-paid jobs in industry in software verification. [[Give lots of examples via a link that I have to find.]]
+Yes, definitely. A lot. There are well-paid jobs in industry in software verification.
+
+ * [A List of companies that use formal verification methods in software engineering](https://github.com/ligurio/practical-fm)
+ * [Formal methods & industry](https://fme-industry.github.io/)
+ * [Agda Jobs](https://functional.works-hub.com/agda-jobs)
 
 ## Are we advocating that all programmers should switch to Agda?
 
-No, of course not. You shouldn't do that except in special situations. What we are saying is that you should learn to reason about programs, and we are using Agda for that purpose, in particular because it allows to reason about programs and record the reasoning in Agda itself, and because it allows to define more precise types by the availability of logic at the programming level, via the proposition-as-types and proofs-as-programs understanding of logic. But the ideas discussed in this module to reason about programs can be applied beyond Agda and beyond functional programming, and they have. [[Do we give e.g. the example of a Coq-verified compiler for a subset of C used in avionics?]]
+No, of course not. You shouldn't do that except in special situations. What we are saying is that you should learn to reason about programs, and we are using Agda for that purpose, in particular because it allows to reason about programs and record the reasoning in Agda itself, and because it allows to define more precise types by the availability of logic at the programming level, via the proposition-as-types and proofs-as-programs understanding of logic. But the ideas discussed in this module to reason about programs can be applied beyond Agda and beyond functional programming, and they have.
+
+**Example.**
+
+ * [A verified C compiler](https://compcert.org/)
+
+## Is Agda unique in being able to express both programs and logical statements?
+
+No, for example, there are also [Coq](https://coq.inria.fr/) and [Lean](https://leanprover.github.io/) among many others.
+
+## Agda installation
+
+We offer you a complete Agda environment
+
+ * in the UG04 Lab machines, and
+ * as a Jupyter Notebook accessible via a browser,
+
+so that you don't need to install it in your own machine.
+
+We are using Agda 2.6.2, the latest version at the time of writing. There is a standard library, but we are not going to use it, at least not to begin with.
+
+You may still wish to [install Agda in your own machine](https://www.gnu.org/software/emacs/download.html), but we are not able to provide support, although you are welcome to ask questions on [Teams](https://teams.microsoft.com/l/team/19%3aR61tJG-pMjV401vTB2LyPJrPPpwhLzKQb2XbdwC9R5s1%40thread.tacv2/conversations?groupId=61980408-0833-4885-91fa-2ecde6c7c03f&tenantId=b024cacf-dede-4241-a15c-3c97d553e9f3).
+It is much easier to install on Linux and Mac, and possible on Windows.
+
+## Agda resources that you will need for daily use
+
+ * [Getting started](https://agda.readthedocs.io/en/latest/getting-started/index.html)
+ * [Language reference](https://agda.readthedocs.io/en/latest/language/index.html)
+ * [Emacs mode](https://agda.readthedocs.io/en/latest/tools/emacs-mode.html)
+ * [Key bindings](https://agda.readthedocs.io/en/latest/tools/emacs-mode.html#keybindings)
+ * [Global commands](https://agda.readthedocs.io/en/latest/tools/emacs-mode.html#global-commands)
+ * [Commands in context of a goal](https://agda.readthedocs.io/en/latest/tools/emacs-mode.html#commands-in-context-of-a-goal)
+ * [Other commands](https://agda.readthedocs.io/en/latest/tools/emacs-mode.html#other-commands)
+ * [Unicode input](https://agda.readthedocs.io/en/latest/tools/emacs-mode.html#unicode-input)
+
+## Emacs resources
+
+Agda has a very nice interactive environment for writing programs which works in the text editor [emacs](http://www.gnu.org/software/emacs/).
+
+ * [Install emacs](https://www.gnu.org/software/emacs/download.html)
+ * [A guided tour of Emacs](https://www.gnu.org/software/emacs/tour/index.html)
+ * [Emacs manual](https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html)
+ * [Emacs reference card](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
+ * [A tutorial introduction to emacs](https://www2.lib.uchicago.edu/keith/tcl-course/emacs-tutorial.html)
+
+The [Getting Started](https://plfa.github.io/GettingStarted/) section of the online book
+[Programming Language Foundations in Agda](https://plfa.github.io/) has a nice installation guide as well as a summary of emacs commands.
+
+## Visual Studio Code
+
+There is [plugin for Agda support](https://marketplace.visualstudio.com/items?itemName=banacorn.agda-mode) available on the Visual Studio Marketplace. We haven't tried it.
 
 ## Further reading
 
-[[Add links to things that are linked in the Agda Wiki.]]
+ * [The Agda Wiki](https://wiki.portal.chalmers.se/agda/pmwiki.php)
+ * [Agda tutorials](https://wiki.portal.chalmers.se/agda/Main/Othertutorials)
+ * [Dependently Typed Programming in Agda](http://www.cse.chalmers.se/~ulfn/papers/afp08/tutorial.pdf)
+ * [Dependent types at work](http://www.cse.chalmers.se/~peterd/papers/DependentTypesAtWork.pdf)
+
+## Advanced reading
+
+ * [Programming Language Foundations in Agda](https://plfa.github.io/)
