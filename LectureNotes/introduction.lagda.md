@@ -1,6 +1,8 @@
 <!--
 ```agda
 {-# OPTIONS --without-K --safe #-}
+
+module introduction where
 ```
 -->
 # Introduction to Advanced Functional Programming
