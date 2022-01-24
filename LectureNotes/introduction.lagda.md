@@ -124,7 +124,7 @@ _*_ : ℕ → ℕ → ℕ
 zero  * y = 0
 suc x * y = x * y + y
 
-infixl 20 _+_
+infixr 20 _+_
 infixr 30 _*_
 
 sample-list₀ : List ℕ
@@ -144,7 +144,7 @@ _++_ : {A : Type} → List A → List A → List A
 [] ++ ys        = ys
 (x :: xs) ++ ys = x :: (xs ++ ys)
 
-infixl 20 _++_
+infixr 20 _++_
 
 map : {A B : Type} → (A → B) → List A → List B
 map f []        = []
