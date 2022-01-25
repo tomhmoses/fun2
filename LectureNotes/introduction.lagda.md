@@ -143,7 +143,7 @@ length []        = 0
 length (x :: xs) = 1 + length xs
 
 _++_ : {A : Type} → List A → List A → List A
-[] ++ ys        = ys
+[]        ++ ys = ys
 (x :: xs) ++ ys = x :: (xs ++ ys)
 
 infixr 20 _++_
