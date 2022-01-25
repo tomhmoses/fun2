@@ -195,7 +195,13 @@ head (x :: xs) = x
 tail : {A : Type} {n : ℕ} → Vector A (suc n) → Vector A n
 tail (x :: xs) = xs
 ```
-Agda accepts the above definitions because it knows that the input vector has at least one element, and hence does have a head and a tail.
+Agda accepts the above definitions because it knows that the input vector has at least one element, and hence does have a head and a tail. Here is another example.
+
+```agda
+vlength : {A : Type} {n : ℕ} → Vector A n → ℕ
+vlength []        = 0
+vlength (x :: xs) = 1 + vlength xs
+```
 
 Dependent types are pervasive in Agda.
 
