@@ -3,6 +3,7 @@
 Under construction and constant revision for improvement until the end of term.
 
  1. [Introduction](files/introduction.lagda.md)
+    1. [Resources for daily use](files/resources.md)
  1. Propositions as types and basic Martin-Löf type theory
     1. [Basic Martin-Löf Type Theory](files/curry-howard.lagda.md)
     1. [Empty type](files/empty-type.lagda.md) `𝟘`

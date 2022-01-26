@@ -1,3 +1,4 @@
-# afp-learning
+# Advanced Functional Programming index
 
-Repository for distributing materials for Advanced Functional Programming to students
+ 1. [Lecture Notes](LectureNotes)
+ 2. [Resources for daily use](LectureNotes/files/resource.md)
