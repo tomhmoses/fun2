@@ -15,19 +15,22 @@ We expect you to work for 13 hours every week on this module, as follows:
 
  * 9 hours studying handouts, watching recorded lectures about them, and doing unassessed but mandatory exercises, and recording your performance on [Canvas](https://canvas.bham.ac.uk/courses/56295).
 
-
 ## What you have to do this week
 
 ### Check the GitLab repository
 
  * [GitLab](https://git.cs.bham.ac.uk/mhe/afp-learning/-/tree/main)
 
-### Attend the UG04 Lab at 12-2pm
+### Attend the UG04 Lab in Computer Science at 12-2pm
 
 No previous preparation needed.
 
  * There will be a lecture,
  * You will also get exercises to do during the lab.
+
+### Important
+
+ * The first lab is particularly crucial. Make sure you don't miss it.
 
 ### Read handouts for this week
 
@@ -53,7 +56,7 @@ Total 2hrs.
 
 ### Attend the Thursday 4-6pm lecture at Old Gym LG12
 
-You **must** read the handouts carefully enough week before the lecture.
+You **must** read the handout carefully enough before the lecture to be able to fully participate of the discussions.
 
 ### Complete the lab exercises by the end of this week
 
@@ -65,3 +68,11 @@ You **must** read the handouts carefully enough week before the lecture.
 
  * Check the [Campus Map](https://www.birmingham.ac.uk/contact/directions/index.aspx).
  * After all this has been a long pandemic and we don't expect you to be fully acquainted with the campus buildings even if you are in year 3 or 4 of your studies.
+
+### If you are lost in Week 1
+
+In a different sense.
+
+ * Use [Teams](https://teams.microsoft.com/l/team/19%3aR61tJG-pMjV401vTB2LyPJrPPpwhLzKQb2XbdwC9R5s1%40thread.tacv2/conversations?groupId=61980408-0833-4885-91fa-2ecde6c7c03f&tenantId=b024cacf-dede-4241-a15c-3c97d553e9f3) to reach us.
+
+ * Reach the lecturers and TA's in the lab.
