@@ -1,6 +1,9 @@
 Mondays  12-2pm : UG04 Lab
 Thursdays 4-6pm : Old Gym LG12
 
+The dates and times for the tests are provisional and so is the number of tests. Also the additional work for the students taking the extended version of the module is missing.
+
+```
      February 2022
 Su Mo Tu We Th Fr Sa
    31  1  2  3  4  5  Week 1
@@ -30,3 +33,4 @@ Su Mo Tu We Th Fr Sa
 15 16 17 18 19 20 21  Week 13  Wellfare catch-up test on Monday 12-2pm UG04 Lab
 22 23 24 25 26 27 28
 29 30 31
+```
