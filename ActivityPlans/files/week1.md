@@ -18,6 +18,10 @@ We expect you to work for 13 hours every week on this module, as follows:
 
 ## What you have to do this week
 
+### Check the GitLab repository
+
+ * [GitLab](https://git.cs.bham.ac.uk/mhe/afp-learning/-/tree/main)
+
 ### Attend the UG04 Lab at 12-2pm
 
 No previous preparation needed.
