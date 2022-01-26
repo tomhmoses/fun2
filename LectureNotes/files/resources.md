@@ -12,7 +12,7 @@ so that you don't need to install it in your own machine.
 We are using Agda 2.6.2, the latest version at the time of writing. There is a standard library, but we are not going to use it, at least not to begin with.
 
 You may still wish to [install Agda in your own machine](https://agda.readthedocs.io/en/latest/getting-started/installation.html), but we are not able to provide support, although you are welcome to ask questions on [Teams](https://teams.microsoft.com/l/team/19%3aR61tJG-pMjV401vTB2LyPJrPPpwhLzKQb2XbdwC9R5s1%40thread.tacv2/conversations?groupId=61980408-0833-4885-91fa-2ecde6c7c03f&tenantId=b024cacf-dede-4241-a15c-3c97d553e9f3).
-It is much easier to install on Linux and Mac, and possible on Windows.
+It is much easier to install on Linux and Mac, and possible on Windows (one option is to use the Window Subsystem Linux (WSL) and use the Linux installation guide).
 
 ## Agda resources that you will need for daily use
 
