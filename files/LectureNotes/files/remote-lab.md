@@ -2,7 +2,7 @@
 
 ## Warning
 
-Unfortunately, we are not able to offer support for this. But you are welcome to ask questions on [Teams](https://teams.microsoft.com/l/team/19%3aR61tJG-pMjV401vTB2LyPJrPPpwhLzKQb2XbdwC9R5s1%40thread.tacv2/conversations?groupId=61980408-0833-4885-91fa-2ecde6c7c03f&tenantId=b024cacf-dede-4241-a15c-3c97d553e9f3) and if we know a solution to your porblem, we will try to help, or an other student may know the answer.
+Unfortunately, we are not able to offer support for this. But you are welcome to ask questions on [Teams](https://teams.microsoft.com/l/team/19%3aR61tJG-pMjV401vTB2LyPJrPPpwhLzKQb2XbdwC9R5s1%40thread.tacv2/conversations?groupId=61980408-0833-4885-91fa-2ecde6c7c03f&tenantId=b024cacf-dede-4241-a15c-3c97d553e9f3) and if we know a solution to your problem, we will try to help, or another student may know the answer.
 
 
 ## Installing `ssh`
