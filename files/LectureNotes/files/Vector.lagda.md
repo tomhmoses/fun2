@@ -7,9 +7,9 @@ module Vector where
 open import general-notation
 ```
 -->
-# Lists
+# Vectors
 
-This type has already been briefly discussed in the introduction.
+This type has already been briefly discussed in the [introduction](introduction.lagda.md).
 ```agda
 open import natural-numbers-type
 

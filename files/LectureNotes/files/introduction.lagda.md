@@ -299,7 +299,7 @@ Here are the definitions of the functions, but we don't expect you to be able to
   II : (x :: xs) ++ [] ≡ x :: xs
   II = I
 
-++assoc []       ys zs = refl (ys ++ zs)
+++assoc []        ys zs = refl (ys ++ zs)
 ++assoc (x :: xs) ys zs = II
   where
     IH : (xs ++ ys) ++ zs ≡ xs ++ (ys ++ zs)

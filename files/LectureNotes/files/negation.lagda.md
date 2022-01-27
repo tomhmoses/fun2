@@ -10,23 +10,7 @@ open import prelude
 -->
 ## Reasoning with negation
 
-[[This file requires a lot of further work]]
-
-Negation is defined as follows:
-
-```agda
-is-empty : Type → Type
-is-empty X = X → 𝟘
-
-𝟘-is-empty : is-empty 𝟘
-𝟘-is-empty = id
-
-¬_ : Type → Type
-¬ X = is-empty X
-
-𝟙-is-nonempty : ¬ is-empty 𝟙
-𝟙-is-nonempty f = f ⋆
-```
+[[This file is a mess and requires a lot of further work. For the moment we only have bits and pieces.]]
 
 We have the following two proofs of "not false":
 
@@ -73,3 +57,14 @@ one-negation-implies-three A = double-negation-intro (¬ A)
 ```
 
 [[Write code proving that `¬ (Σ x : ℕ , x ≡ x + 1)`.]]
+
+```agda
+implication-truth-table : ((𝟘 → 𝟘) ⇔ 𝟙)
+                        × ((𝟘 → 𝟙) ⇔ 𝟙)
+                        × ((𝟙 → 𝟘) ⇔ 𝟘)
+                        × ((𝟙 → 𝟙) ⇔ 𝟙)
+implication-truth-table = ((λ _ → ⋆)   , (λ _ → id)) ,
+                          ((λ _ → ⋆)   , (λ _ _ → ⋆)) ,
+                          ((λ f → f ⋆) , (λ ⋆ _ → ⋆)) ,
+                          ((λ _ → ⋆)   , (λ _ _ → ⋆))
+```

@@ -15,7 +15,7 @@ This type can be defined to be `𝟙 ∔ 𝟙` using [binary sums](binary-sums.l
 data 𝟚 : Type where
  𝟎 𝟏 : 𝟚
 ```
-This type is not only [isomorphic to `𝟙 ∔ 𝟏`](isomorphisms.lagda.md) but also to the type `Bool` os booleans.
+This type is not only [isomorphic to `𝟙 ∔ 𝟙`](isomorphisms.lagda.md) but also to the type [`Bool`](Bool.lagda.md] of booleans.
 Its elimination principle is as follows:
 ```agda
 𝟚-elim : {A : 𝟚 → Type}
@@ -25,7 +25,7 @@ Its elimination principle is as follows:
 𝟚-elim x₀ x₁ 𝟎 = x₀
 𝟚-elim x₀ x₁ 𝟏 = x₁
 ```
-In logical terms, this says that it order to prove that a property `A` of elements of the binary type `𝟚` holds for all elements of the type `𝟚`, it is enough to prove that it holds for `𝟎` and for `𝟏`. The non-dependent version of the eliminator is the following:
+In logical terms, this says that it order to show that a property `A` of elements of the binary type `𝟚` holds for all elements of the type `𝟚`, it is enough to show that it holds for `𝟎` and for `𝟏`. The non-dependent version of the eliminator is the following:
 ```agda
 𝟚-nondep-elim : {A : Type}
               → A

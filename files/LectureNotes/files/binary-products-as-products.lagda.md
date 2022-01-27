@@ -10,7 +10,7 @@ open import prelude
 
 ## Binary products as a special case of arbitrary products
 
-Using the binary type `𝟚`, binary products can be seen as a special case of arbitrary products as follows:
+Using the [binary type](binary-type.lagda.md) `𝟚`, binary products can be seen as a special case of arbitrary products as follows:
 ```agda
 open import binary-type
 
@@ -23,7 +23,9 @@ A₀ ×' A₁ = Π n ꞉ 𝟚 , A n
 
 infixr 2 _×'_
 ```
-To justify this claim, we establish an isomorphism. But we need to assume function extensionality for this purpose.
+We could have written the type `Π n ꞉ 𝟚 , A n` as simply `(n : 𝟚) → A n`, but we wanted to emphasize that binary products `_×_` are special cases of arbitrary products `Π`.
+
+To justify this claim, we establish an [isomorphism](isomorphism.lagda.md). But we need to assume [function extensionality](function-extensionality.lagda.md) for this purpose.
 ```agda
 open import isomorphisms
 open import function-extensionality
@@ -54,4 +56,4 @@ binary-product-isomorphism funext A₀ A₁ = record { bijection = f ; bijectivi
   f-is-bijection : is-bijection f
   f-is-bijection = record { inverse = g ; η = gf ; ε = fg }
 ```
-Notice that the above argument, in Agda, not only *shows* that the types are indeed isomorphic, but also *how* and *why* they are isomorphic. Thus, logical arguments coded in Agda are useful not only to get confidence in correctness, but also to gain understanding.
+Notice that the above argument, in Agda, not only *shows* that the types are indeed isomorphic, but also explains *how* and *why* they are isomorphic. Thus, logical arguments coded in Agda are useful not only to get confidence in correctness, but also to gain understanding.

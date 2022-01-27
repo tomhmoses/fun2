@@ -29,7 +29,7 @@ private
 And these are all the elements of `Fin 3`. Notice that `Fin 0` is empty:
 ```agda
 
-open import negation public
+open import empty-type public
 
 Fin-0-is-empty : is-empty (Fin 0)
 Fin-0-is-empty ()

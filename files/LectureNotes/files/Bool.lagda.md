@@ -13,7 +13,7 @@ open import general-notation
 data Bool : Type where
  true false : Bool
 ```
-**Exercise.** Write down the dependent and non-dependent elimination principle for the booleans. Conclude that the non-dependent eliminator amounts to if-then-else.
+**Exercise.** Write down the dependent and non-dependent elimination principles for the booleans. Conclude that the non-dependent eliminator amounts to if-then-else.
 
 ## Isomorphism with a Basic MLTT type
 
