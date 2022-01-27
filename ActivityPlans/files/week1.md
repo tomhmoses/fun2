@@ -8,7 +8,7 @@ We expect you to work for 13 hours every week on this module, as follows:
 
  * 2 hours attending in person lectures (Old Gym LG12) **4-6pm on Thursdays**
 
-   Trust us, the above above information is more reliable than the
+   Trust us, the above information is more reliable than the
    information provided by the University.
 
  * In some weeks, however, *when explicitly announced*, there will be an assessed test in the Lab UG04 at a time compatible with your timetable.
