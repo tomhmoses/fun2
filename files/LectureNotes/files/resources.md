@@ -4,7 +4,7 @@
 
 We offer you a complete Agda environment
 
- * in the UG04 Lab machines, and
+ * in the UG04 Lab machines, either in person of [remotely](remote-lab.md) and
  * as a Jupyter Notebook accessible via a browser,
 
 so that you don't need to install it in your own machine.
