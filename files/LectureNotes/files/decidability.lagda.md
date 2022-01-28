@@ -10,7 +10,7 @@ open import negation
 -->
 # Propositions as types versus propositions as booleans
 
-[[Under construction. We haven't proof-read for typos yet.]]
+[[Under construction. In particular, we haven't proof-read for typos yet.]]
 
 When programming in Haskell, and indeed in C or Java or Python, etc., we use *booleans* rather than *types* to encode logical propositions.
 
