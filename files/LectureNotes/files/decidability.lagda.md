@@ -26,7 +26,7 @@ In Haskell, we have a function `(==) : Eq a => a -> a -> Bool`. The type constra
 
 **Counter-example.** We *can't check* equality of functions of type `ℕ → ℕ`, for instance. Intuitively, to check that two functions `f` and `g` of this type are equal, we need to check infinitely many cases, namely `f x = g x` for all `x : ℕ`. But, we are afraid, intuition is not enough. This has to be proved. Luckily in our case, [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) provided the basis to prove that. He showed that the [Halting Problem](https://en.wikipedia.org/wiki/Halting_problem) can't be solved by an algorithm in any programming language. It follows from this that we can't check whether two such functions `f` and `g` are equal or not using an algorithm.
 
-The above examples and counter-exasmple show that sometimes we can decide equality with an algorithm, and sometimes we can't. However, for example, the identity type `_≡_` applies to all types, whether they have decidable equality or not, and this is why it is useful. We can think about equality, not only in our heads but also in Agda, with worring whether it can be *checked* to be true or not by a computer. The identity type is not about *checking* equality. In fact, equality it is very often not checkable by the computer. It is instead about *stating* and *proving* or *disproving* equalities, where the proving and disproving is done by people (the lecturers and the students in this case), by hard, intellingent work.
+The above examples and counter-examples show that sometimes we can decide equality with an algorithm, and sometimes we can't. However, for example, the identity type `_≡_` applies to all types, whether they have decidable equality or not, and this is why it is useful. We can think about equality, not only in our heads but also in Agda, without worring whether it can be *checked* to be true or not by a computer. The identity type is not about *checking* equality. In fact, equality it is very often not checkable by the computer. It is instead about *stating* and *proving* or *disproving* equalities, where the proving and disproving is done by people (the lecturers and the students in this case), by hard, intellingent work.
 
 ## Decidable propositions
 
@@ -41,7 +41,7 @@ This means that there is an algorithm that gives an element of `A` or shows that
 
 ## Decidable propositions as booleans
 
-The following shows that a type `A` is decidable if and only if there is `b : Bool` such that `A` has an element if and only if the boolean `b` is `true`.
+The following shows that a type `A` is decidable if and only if there is `b : Bool` such that `A` is decidable if and only if the boolean `b` is `true`.
 
 For the purposes of this handout, understanding the following proof is not important. What is important is to understand *what* the type of the following function is saying, which is what we explained above.
 
