@@ -41,8 +41,13 @@ $ ssh username@tw.cs.bham.ac.uk
 $ ssh-lab
 $ module load agda
 ```
+Before running Agda for the first time you have to do this:
+```agda
+$ agda-mode setup
+```
+After the first time you don't need to do this any longer.
 
-Notice that, again, `username` has to be in **lowercase**. Also, make sure you use your **School of Computer Science password**, if you set it to be **different** from the **University password**.
+Notice that `username` has to be in **lowercase**. Also, make sure you use your **School of Computer Science password**, if you set it to be **different** from the **University password**.
 
  * The first `ssh` is to connect to the student's gateway machine `tinky-winky`,
    abbreviated `tw`. You will get a terminal running there.

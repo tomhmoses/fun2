@@ -16,7 +16,7 @@ We will do this handout in the lab. We will solve some of the problems, and you 
 ```agda
 open import isomorphisms
 
-lists-from-vectors : {A : Type} → List A ≅ Σ n ꞉ ℕ , Vector A n
+lists-from-vectors : {A : Type} → List A ≅ (Σ n ꞉ ℕ , Vector A n)
 lists-from-vectors {A} = record { bijection = f ; bijectivity = f-is-bijection }
  where
   f : {!!} → {!!}
@@ -38,7 +38,7 @@ lists-from-vectors {A} = record { bijection = f ; bijectivity = f-is-bijection }
 ## The type of vectors can be define from that of lists
 
 ```agda
-vectors-from-lists : {A : Type} (n : ℕ) → Vector A n ≅ Σ xs ꞉ List A , (length xs ≡ n)
+vectors-from-lists : {A : Type} (n : ℕ) → Vector A n ≅ (Σ xs ꞉ List A , (length xs ≡ n))
 vectors-from-lists {A} n = record { bijection = f ; bijectivity = f-is-bijection }
  where
   f : {!!} → {!!}
