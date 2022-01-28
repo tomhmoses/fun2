@@ -62,10 +62,13 @@ predicate-decidability-with-booleans : {X : Type} (A : X → Type)
 predicate-decidability-with-booleans {X} A = f , g
  where
   f : is-decidable-predicate A → Σ α ꞉ (X → Bool) , ((x : X) → A x ⇔ α x ≡ true)
-  f = {!!}
+  f d = α , {!!}
+   where
+    α : X → Bool
+    α x = {!!}
 
   g : (Σ α ꞉ (X → Bool) , ((x : X) → A x ⇔ α x ≡ true)) → is-decidable-predicate A
-  g = {!!}
+  g (α , ϕ) = {!!}
 
 ```
 
