@@ -13,10 +13,10 @@ Su Mo Tu We Th Fr Sa
 
      March 2022
 Su Mo Tu We Th Fr Sa
-   28  1  2  3  4  5  Week 5
+27 28  1  2  3  4  5  Week 5
  6  7  8  9 10 11 12  Week 6 Practice Test on Monday 12-2pm at UG04 Lab
 13 14 15 16 17 18 19  Week 7
-20 21 22 23 24 25 26  Week 8 Test 1 on Monday 12-2pm at UG04 Lab
+20 21 22 23 24 25 26  Week 8 Test 1 on Monday 11-2pm at UG04 Lab
 27 28 29 30 31  1  2  Week 9
 
      April 2022
@@ -28,9 +28,9 @@ Su Mo Tu We Th Fr Sa
 
       May 2022
 Su Mo Tu We Th Fr Sa
- 1  2  3  4  5  6  7  Week 11  Test 2 on Thursday 4-6pm UG04 Lab
+ 1  2  3  4  5  6  7  Week 11  Test 2 on Thursday 4-7pm UG04 Lab
  8  9 10 11 12 13 14  Week 12
-15 16 17 18 19 20 21  Week 13  Wellfare catch-up test on Monday 12-2pm UG04 Lab
+15 16 17 18 19 20 21  Week 13  Welfare catch-up test on Monday 12-2pm UG04 Lab
 22 23 24 25 26 27 28
 29 30 31
 ```

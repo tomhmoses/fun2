@@ -15,6 +15,9 @@ open import prelude
 We have the following two proofs of "not false":
 
 ```agda
+_≢_ : {X : Type} → X → X → Type
+x ≢ y = ¬ (x ≡ y)
+
 not-false : ¬ 𝟘
 not-false = 𝟘-elim
 

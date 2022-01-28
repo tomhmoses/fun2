@@ -31,7 +31,7 @@ We now can define bi-implication, or logical equivalence, as follows:
 _⇔_ : Type → Type → Type
 A ⇔ B = (A → B) × (B → A)
 
-infix 2 _⇔_
+infix -2 _⇔_
 ```
 The symbol `⇔` is often pronounced "if and only if".
 

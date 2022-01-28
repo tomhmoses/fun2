@@ -58,7 +58,7 @@ In logical terms, one can see immediately what the type of `ℕ-elim` is: it is 
 
 ## Addition and multiplication
 
-As an exercise, you may try to define the following functions using some version of the above eliminators instead of using pattern matching and recursion:
+As an **exercise**, you may try to define the following functions using some version of the above eliminators instead of using pattern matching and recursion:
 
 ```agda
 _+_ : ℕ → ℕ → ℕ

@@ -64,6 +64,8 @@ Sigma : (A : Type) (B : A → Type) → Type
 Sigma A B = Σ {A} B
 
 syntax Sigma A (λ x → b) = Σ x ꞉ A , b
+
+infix -1 Sigma
 ```
 
 ## Elimination principle

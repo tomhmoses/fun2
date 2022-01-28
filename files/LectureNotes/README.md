@@ -21,6 +21,7 @@ Under construction and constant revision for improvement until the end of term.
     1. [Definition and basic examples](files/isomorphisms.lagda.md)
     1. [Binary sums as a special case of sums](files/binary-sums-as-sums.lagda.md)
     1. [Binary products as a special case of products](files/binary-products-as-products.lagda.md)
+    1. [List and vector isomorphisms](files/vector-and-list-isomorphisms)
  1. More types, their elimination principles, and their isomorphism with Basic MLTT types
     1. [Booleans](files/Bool.lagda.md)
     1. [Maybe type](files/Maybe.lagda.md)

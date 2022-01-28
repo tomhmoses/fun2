@@ -15,6 +15,8 @@ This is the same as (or, more precisely, [isomorphic](isomorphisms.lagda.md) to)
 data _∔_ (A B : Type) : Type where
  inl : A → A ∔ B
  inr : B → A ∔ B
+
+infixr 20 _∔_
 ```
 
 The type `A ∔ B` is called the coproduct of `A` and `B`, or the sum of `A` and `B`, or the disjoint union of `A` and `B`. The elements of `A ∔ B` are of the form `inl x` with `x : A` and `inr y` with `y : B`.

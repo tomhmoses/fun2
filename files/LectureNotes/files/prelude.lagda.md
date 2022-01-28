@@ -12,4 +12,7 @@ open import sums public
 open import products public
 open import identity-type public
 open import natural-numbers-type public
+open import Bool public
+open import List public
+open import Vector public
 ```
