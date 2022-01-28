@@ -163,4 +163,4 @@ A particular case of interest regarding the above discussion is the notion of a 
 has-decidable-equality : Type → Type
 has-decidable-equality X = (x y : X) → is-decidable (x ≡ y)
 ```
-**Exercise.** Show, in Agda, that a type `X` has decidable equality if and only if there is a function `X → X → Bool` that checks whether two elements of `X` are equal or not.`<
+**Exercise.** Show, in Agda, that a type `X` has decidable equality if and only if there is a function `X → X → Bool` that checks whether two elements of `X` are equal or not.
