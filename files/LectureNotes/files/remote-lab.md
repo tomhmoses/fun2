@@ -45,7 +45,7 @@ Before running Agda for the first time you have to do this:
 ```agda
 $ agda-mode setup
 ```
-After the first time you don't need to do this any longer.
+After the first time you don't need to do this any longer. However, you need to do `module load agda` every time you login to a machine before start working.
 
 Notice that `username` has to be in **lowercase**. Also, make sure you use your **School of Computer Science password**, if you set it to be **different** from the **University password**.
 
