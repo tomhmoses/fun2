@@ -26,6 +26,12 @@ not-false' = id
 
 ```
 
+TODO. Put this in some other file:
+```agda
+false-is-not-true : false ≢ true
+false-is-not-true ()
+```
+
 A lot of things about negation don't depend on the fact that the target type of the function type is `𝟘`. We will begin by proving some things about negation by generalizing `𝟘` to any type `R` of "results".
 
 ```agda
