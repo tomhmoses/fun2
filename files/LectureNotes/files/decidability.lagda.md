@@ -16,7 +16,7 @@ When programming in Haskell, and indeed in C or Java or Python, etc., we use *bo
 
 We now discuss why we use types to encode logical propositions, and
 *when* booleans can be used instead. It is not always.  It is here
-that the prerequisite *models of computations* shows up.
+that the prerequisite *Theories of Computation* shows up.
 
 ## Discussion and motivation
 
