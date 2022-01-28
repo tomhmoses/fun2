@@ -17,7 +17,7 @@ Under construction and constant revision for improvement until the end of term.
     1. [Natural numbers](files/natural-numbers-type.lagda.md) `ℕ`
     1. [Negation](files/negation.lagda.md) `¬`
     1. [Function extensionality](files/function-extensionality.lagda.md)
- 1. [Propositions as type versus propositions as booleans](decidability.lagda.md)
+ 1. [Propositions as types versus propositions as booleans](decidability.lagda.md)s
  1. Isomorphisms `≅`
     1. [Definition and basic examples](files/isomorphisms.lagda.md)
     1. [Binary sums as a special case of sums](files/binary-sums-as-sums.lagda.md)
