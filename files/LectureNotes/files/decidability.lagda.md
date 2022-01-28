@@ -94,7 +94,7 @@ This says what to be even *means*. But it doesn't say how we *check* with a comp
 
 This is possible because
 
- ? `(x : X) → is-decidable (is-even x)`.
+ > `(x : X) → is-decidable (is-even x)`.
 
 The following generalizes the above discussion and implements it in Agda.
 
