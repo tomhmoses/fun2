@@ -89,7 +89,7 @@ If you are allowed to attend the lab lecture remotely, please check [remote lab 
  1. **Optional** suggestion to make your life easier when **working with your own machine**. We can't offer support for this, but feel free to ask on [Teams](https://teams.microsoft.com/l/team/19%3aR61tJG-pMjV401vTB2LyPJrPPpwhLzKQb2XbdwC9R5s1%40thread.tacv2/conversations?groupId=61980408-0833-4885-91fa-2ecde6c7c03f&tenantId=b024cacf-dede-4241-a15c-3c97d553e9f3).
 
 
-    * If you work with your own machine, you will still need to use the lab machine from time to time, and in particular during the tests.
+    * If you work with your own machine, you will still need to use the lab machines from time to time, and in particular during the tests.
 
     * it is difficult to keep two different machines synchronized.
 
@@ -99,7 +99,7 @@ If you are allowed to attend the lab lecture remotely, please check [remote lab 
 
     * For this you can use programs such as `scp`, `rsync` and `unison`. Look them up with a search engine.
 
-    * But a **much easier** way it to use `sshfs`. Look for installation instructions with a search engine.
+    * But a **much easier** way is to use `sshfs`. Look for installation instructions with a search engine.
 
     * E.g. in `ubuntu`, you install it with `sudo apt install sshfs`.
 
