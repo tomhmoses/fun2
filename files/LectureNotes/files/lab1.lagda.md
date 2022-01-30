@@ -82,7 +82,7 @@ If you are allowed to attend the lab lecture remotely, please check [remote lab 
 
     * You will need to `git pull` regularly, as we update this repository regularly.
 
-    * **Don't modify** any of the existing files are you will get conflicts.
+    * **Don't modify** any of the existing files as you will get conflicts.
 
     * If you want to experiment with any of the provided files, which you should certainly do when you are studying, make a copy of the file with a new name. Don't forget to change the line `module filename where` with the new name you have chosen.
 
