@@ -23,7 +23,10 @@ pred (suc n) = n
 
 suc-left-cancellable : {x y : ℕ} → suc x ≡ suc y → x ≡ y
 suc-left-cancellable = ap pred
-
+```
+**Exercises.**
+```agda
+{-
 +-assoc : (x y z : ℕ) → (x + y) + z ≡ x + (y + z)
 +-assoc x y z = {!!}
 
@@ -36,8 +39,12 @@ suc-left-cancellable = ap pred
 +-commutative : (x y : ℕ) → x + y ≡ y + x
 +-commutative x y = {!!}
 
+*-commutative : (x y : ℕ) → x * y ≡ y * x
+*-commutative x y = {!!}
+
 +-right-cancellable : (x y z : ℕ) → x + z ≡ y + z → x ≡ y
 +-right-cancellable x y z p = {!!}
+-}
 ```
 
 ## Order relation _≤_
@@ -64,6 +71,9 @@ data _≤_ : ℕ → ℕ → Type where
 
 _≥_ : ℕ → ℕ → Type
 x ≥ y = y ≤ x
+
+infix 0 _≤_
+infix 0 _≥_
 ```
 
 We will now show some properties of these relations.
@@ -112,6 +122,59 @@ suc-preserves-≤₀ {x} {y} (a , p) = γ
 
   γ : suc x ≤₀ suc y
   γ = suc-preserves-≤₀ IH
+```
+
+## Exponential function
+
+```agda
+_^_ : ℕ → ℕ → ℕ
+y ^ 0     = 1
+y ^ suc x = y * y ^ x
+
+infix 40 _^_
+```
+
+## Maximum and minimum
+
+```agda
+max : ℕ → ℕ → ℕ
+max 0       y       = y
+max (suc x) 0       = suc x
+max (suc x) (suc y) = suc (max x y)
+```
+**Exercises.**
+```agda
+{-
+max-idempotent : (x : ℕ) → max x x ≡ x
+max-idempotent x = {!!}
+
+max-commutative : (x y : ℕ) → max x y ≡ max y x
+max-commutative x y = {!!}
+
+max-associative : (x y z : ℕ) → max x (max y z) ≡ max (max x y) z
+max-associative x y z = {!!}
+
+min : ℕ → ℕ → ℕ
+min x y = {!!}
+
+min-idempotent : (x : ℕ) → min x x ≡ x
+min-idempotent x = {!!}
+
+min-idempotent x = {!!}
+min-idempotent x = {!!}
+
+min-commutative : (x y : ℕ) → min x y ≡ min y x
+min-commutative x y = {!!}
+
+min-associative : (x y z : ℕ) → min x (min y z) ≡ min (min x y) z
+min-associative x y z = {!!}
+
+min-max-distributive : (x y z : ℕ) → min x (max y z) ≡ max (min x y) (min x z)
+min-max-distributive x y z = {!!}
+
+max-min-distributive : (x y z : ℕ) → max x (min y z) ≡ min (max x y) (max x z)
+max-min-distributive x y z = {!!}
+-}
 ```
 
 ## Prime numbers

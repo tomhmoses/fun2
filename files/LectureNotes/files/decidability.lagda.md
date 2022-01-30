@@ -30,22 +30,18 @@ The above examples and counter-examples show that sometimes we can decide equali
 
 ## Decidable propositions
 
-Motivated by the above discussion, we define when a logical proposition is decidable under the proposition-as-types understanding of propositions.
-
+Motivated by the above discussion, we define when a logical proposition is decidable under the understanding of propositions as types:
 ```agda
 is-decidable : Type → Type
 is-decidable A = A ∔ ¬ A
 ```
-
-This means that there is an algorithm that gives an element of `A` or shows that no such element can be found.
+This means that we can product an element of `A` or show that no such element can be found.
 
 ## Decidable propositions as booleans
 
 The following shows that a type `A` is decidable if and only if there is `b : Bool` such that `A` is decidable if and only if the boolean `b` is `true`.
 
-For the purposes of this handout, understanding the following proof is not important. What is important is to understand *what* the type of the following function is saying, which is what we explained above.
-
-We will, however, explain the proof in lectures. We recommend skipping the definition of the following type at a first reading of this handout, and instead concentrate on understading its type only.
+For the purposes of this handout, understanding the following proof is not important at a first reading. What is important is to understand *what* the type of the following function is saying, which is what we explained above.
 ```agda
 decidability-with-booleans : (A : Type) → is-decidable A ⇔ Σ b ꞉ Bool , (A ⇔ b ≡ true)
 decidability-with-booleans A = f , g
@@ -88,7 +84,15 @@ module _ where
   is-even : ℕ → Type
   is-even x = Σ y ꞉ ℕ , x ≡ 2 * y
 ```
-This says what to be even *means*. But it doesn't say how we *check* with a computer program whether a number is even or not, which would be given by a function `check-even : ℕ → Bool`. For this function to be correct, it has to be the case that
+This says what to be even *means*. But it doesn't say how we *check* with a computer program whether a number is even or not, which would be given by a function `check-even : ℕ → Bool`.
+```agda
+  check-even : ℕ → Bool
+  check-even 0             = true
+  check-even 1             = false
+  check-even (suc (suc x)) = check-even x
+```
+
+For this function to be correct, it has to be the case that
 
  > `is-even x ⇔ check-even x ≡ true`
 
@@ -148,8 +152,10 @@ predicate-decidability-with-booleans {X} A = f , g
      where
       I : (Σ b ꞉ Bool , (A x ⇔ b ≡ true)) → is-decidable (A x)
       I = rl-implication (decidability-with-booleans (A x))
+
       II : Σ b ꞉ Bool , (A x ⇔ b ≡ true)
       II = (α x , ϕ x)
+
       III : is-decidable (A x)
       III = I II
 
