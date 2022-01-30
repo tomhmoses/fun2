@@ -86,7 +86,7 @@ If you are allowed to attend the lab lecture remotely, please check [remote lab 
 
     * If you want to experiment with any of the provided files, which you should certainly do when you are studying, make a copy of the file with a new name. Don't forget to change the line `module filename where` with the new name you have chosen.
 
- 1. Optional suggestion to make your life easier when **working with your own machine**. We can't offer support for this, but feel free to ask on (https://teams.microsoft.com/l/team/19%3aR61tJG-pMjV401vTB2LyPJrPPpwhLzKQb2XbdwC9R5s1%40thread.tacv2/conversations?groupId=61980408-0833-4885-91fa-2ecde6c7c03f&tenantId=b024cacf-dede-4241-a15c-3c97d553e9f3).
+ 1. Optional suggestion to make your life easier when **working with your own machine**. We can't offer support for this, but feel free to ask on [Teams](https://teams.microsoft.com/l/team/19%3aR61tJG-pMjV401vTB2LyPJrPPpwhLzKQb2XbdwC9R5s1%40thread.tacv2/conversations?groupId=61980408-0833-4885-91fa-2ecde6c7c03f&tenantId=b024cacf-dede-4241-a15c-3c97d553e9f3).
 
     * If you work with your own machine, you will still need to use the lab machine from time to time, and in particular during the tests.
 
