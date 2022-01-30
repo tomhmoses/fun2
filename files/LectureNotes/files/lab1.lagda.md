@@ -82,11 +82,12 @@ If you are allowed to attend the lab lecture remotely, please check [remote lab 
 
     * You will need to `git pull` regularly, as we update this repository regularly.
 
-    * **Don't modify** any of the existing files are you will get conflicts.
+    * **Don't modify** any of the existing files as you will get conflicts.
 
     * If you want to experiment with any of the provided files, which you should certainly do when you are studying, make a copy of the file with a new name. Don't forget to change the line `module filename where` with the new name you have chosen.
 
- 1. Optional suggestion to make your life easier when **working with your own machine**. We can't offer support for this, but feel free to ask on [Teams](https://teams.microsoft.com/l/team/19%3aR61tJG-pMjV401vTB2LyPJrPPpwhLzKQb2XbdwC9R5s1%40thread.tacv2/conversations?groupId=61980408-0833-4885-91fa-2ecde6c7c03f&tenantId=b024cacf-dede-4241-a15c-3c97d553e9f3).
+ 1. **Optional** suggestion to make your life easier when **working with your own machine**. We can't offer support for this, but feel free to ask on [Teams](https://teams.microsoft.com/l/team/19%3aR61tJG-pMjV401vTB2LyPJrPPpwhLzKQb2XbdwC9R5s1%40thread.tacv2/conversations?groupId=61980408-0833-4885-91fa-2ecde6c7c03f&tenantId=b024cacf-dede-4241-a15c-3c97d553e9f3).
+
 
     * If you work with your own machine, you will still need to use the lab machine from time to time, and in particular during the tests.
 
@@ -121,15 +122,17 @@ If you are allowed to attend the lab lecture remotely, please check [remote lab 
 
  1. Now let's edit our first Agda file from the terminal.
 
-    `$ cd ~/afp-learning/files/LectureNotes/files/`
-    `$ cp lab1.lagda.md my-lab1.lagda.md`
-    `$ emacs my-lab1.lagda.md`
+    ```
+    $ cd ~/afp-learning/files/LectureNotes/files/
+    $ cp lab1.lagda.md my-lab1.lagda.md
+    $ emacs my-lab1.lagda.md
+    ```
 
     * Now you should be seeing this file in emacs. Find this position and start working following our verbal instructions.
 
     * In a browser, go to [Key bindings](https://agda.readthedocs.io/en/latest/tools/emacs-mode.html#keybindings).
 
-    * In a brouser, open [Emacs reference card](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf).
+    * In a browser, open [Emacs reference card](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf).
 
 ## `Ctrl-g Ctrl-g`
 
