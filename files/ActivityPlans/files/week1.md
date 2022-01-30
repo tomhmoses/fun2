@@ -32,6 +32,8 @@ No previous preparation needed.
 
  * The first lab is particularly crucial. Make sure you don't miss it.
 
+ * [Lab1 information and tasks](/LectureNotes/files/lab1.lagda.md)
+
 ### Read handouts for this week
 
 Deadline *Thursday noon*.
