@@ -239,6 +239,6 @@ rev : {A : Type} → List A → List A
 rev xs = rev-append xs []
 ```
 
-## Now we will open emacs not from the command line, in the lab.
+## Now we will open emacs not from the command line, in the lab
 
 Follow visual and verbal instructions.
