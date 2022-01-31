@@ -148,7 +148,7 @@ If you are allowed to attend the lab lecture remotely, please check [remote lab 
 
 ## `Ctrl-g Ctrl-g`
 
-You will need to type this when you start a sequence of emacs commands and then you want to give up without completing sequence.
+You will need to type this when you start a sequence of emacs commands and then you want to give up without completing the sequence.
 
 ## Our first Agda file
 
