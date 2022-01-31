@@ -64,11 +64,21 @@ If you are allowed to attend the lab lecture remotely, please check [remote lab 
 
     * You will need to this *only once*, but it doesn't harm if you do it repeatedly.
 
- 1. After this, we will need to do some configuration so that `emacs` recognizes `.lagda.md` files. You will need to do this only once. Type
+ 1. After this, we will need to do some configuration so that `emacs` recognizes `.lagda.md` files and so that two Agda keyboard shortcuts are registered properly over `ssh`.
+    You will need to do this only once. Type
 
     `$ emacs .emacs`
 
-    * Add the line `(add-to-list 'auto-mode-alist '("\\.lagda.md\\'" . agda2-mode))` anywhere.
+    * Add the lines
+      ```terminal
+      (add-to-list 'auto-mode-alist '("\\.lagda.md\\'" . agda2-mode))
+
+      (add-hook 'agda2-mode-hook
+	  (lambda () (progn
+		       (local-set-key (kbd "C-c ,") 'agda2-goal-and-context)
+		       (local-set-key (kbd "C-c .") 'agda2-goal-and-context-and-inferred))))
+      ```
+      anywhere.
 
     * Type `Ctrl-x Ctrl-s` to save the file.
 
