@@ -16,7 +16,7 @@ It is much easier to install on Linux and Mac, and possible on Windows (one opti
 
 ## Agda resources that you will need for daily use
 
- * [Getting started](https://agda.readthedocs.io/en/latest/getting-started/index.html)
+ * [Getting started](https://agda.readthedocs.io/en/latest/getting-started/index.html) with Agda.
  * [Language reference](https://agda.readthedocs.io/en/latest/language/index.html)
  * [Emacs mode](https://agda.readthedocs.io/en/latest/tools/emacs-mode.html)
  * [Key bindings](https://agda.readthedocs.io/en/latest/tools/emacs-mode.html#keybindings)
