@@ -122,7 +122,7 @@ If you are allowed to attend the lab lecture remotely, please check [remote lab 
 
  1. Now let's edit our first Agda file from the terminal.
 
-    ```
+    ```terminal
     $ cd ~/afp-learning/files/LectureNotes/files/
     $ cp lab1.lagda.md my-lab1.lagda.md
     $ emacs my-lab1.lagda.md
