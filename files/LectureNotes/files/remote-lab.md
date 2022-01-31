@@ -13,7 +13,7 @@ In Ubuntu, open a terminal and run
 ```
 $ sudo apt install ssh
 ```
-
+But this should be already installed by default.
 This also works for many other Debian-based distributions of Linux.
 
 If you use a different distribution of Linux, you may need to replace `apt` by the package manager of your distribution. Please check the documentation of your Linux distribution to learn how to install packages. But in any case the package will be called `sshfs`.
@@ -42,7 +42,7 @@ $ ssh-lab
 $ module load agda
 ```
 Before running Agda for the first time you have to do this:
-```agda
+```
 $ agda-mode setup
 ```
 After the first time you don't need to do this any longer. However, you need to do `module load agda` every time you login to a machine before start working.
