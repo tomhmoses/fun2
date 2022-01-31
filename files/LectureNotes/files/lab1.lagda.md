@@ -143,7 +143,7 @@ You will need to type this when you start a sequence of emacs commands and then 
 Within emacs now type `Ctrl-c Ctrl-l`. This will "load" the Agda file and check it for correctness. The following program fragment has holes that we will fill interactively using the emacs mode for Agda. You can cheat by looking at the handout [introduction](introduction.lagda.md). But you *should not* copy and paste. Instead, you should learn and use the interactive mode following the lecturers verbal and visual instructions.
 
 ```agda
-module lab1 where
+module my-lab1 where
 
 Type = Set
 
