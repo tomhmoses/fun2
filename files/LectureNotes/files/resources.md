@@ -5,9 +5,9 @@
 We offer you a complete Agda environment
 
  * in the UG04 Lab machines, either in person of [remotely](remote-lab.md) and
- * as a Jupyter Notebook accessible via a browser,
+ * as a Jupyter [Notebook accessible via a browser](https://jupyter.apps.okd.aws.cs.bham.ac.uk),
 
-so that you don't need to install it in your own machine.
+so that you don't need to install it in your own machine. However, unfortunately, Jupyter won't work well, because both Jupyter and browsers capture emacs/Agda keybindings. So you more likely prefer remote access to the lab. We also explain how to do this in the first [lab lecture](lab1.lagda.md).
 
 We are using Agda 2.6.2, the latest version at the time of writing. There is a standard library, but we are not going to use it, at least not to begin with.
 
@@ -16,7 +16,7 @@ It is much easier to install on Linux and Mac, and possible on Windows (one opti
 
 ## Agda resources that you will need for daily use
 
- * [Getting started](https://agda.readthedocs.io/en/latest/getting-started/index.html)
+ * [Getting started](https://agda.readthedocs.io/en/latest/getting-started/index.html) with Agda.
  * [Language reference](https://agda.readthedocs.io/en/latest/language/index.html)
  * [Emacs mode](https://agda.readthedocs.io/en/latest/tools/emacs-mode.html)
  * [Key bindings](https://agda.readthedocs.io/en/latest/tools/emacs-mode.html#keybindings)
