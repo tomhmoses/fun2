@@ -38,6 +38,8 @@ Agda has a very nice interactive environment for writing programs which works in
 The [Getting Started](https://plfa.github.io/GettingStarted/) section of the online book
 [Programming Language Foundations in Agda](https://plfa.github.io/) has a nice installation guide as well as a summary of emacs commands.
 
+We will maintain a sample emacs configuration file which you may wish to use as a reference [here](https://git.cs.bham.ac.uk/mhe/afp-learning/-/blob/main/files/Resources/sample.emacs).
+
 ## Visual Studio Code
 
 There is [plugin for Agda support](https://marketplace.visualstudio.com/items?itemName=banacorn.agda-mode) available on the Visual Studio Marketplace. We haven't tried it.
