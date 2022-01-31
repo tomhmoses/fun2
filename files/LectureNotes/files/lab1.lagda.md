@@ -102,11 +102,11 @@ If you are allowed to attend the lab lecture remotely, please check [remote lab 
 
     * If you work with your own machine, you will still need to use the lab machines from time to time, and in particular during the tests.
 
-    * it is difficult to keep two different machines synchronized.
+    * It is difficult to keep two different machines synchronized.
 
     * It is easy to lose files.
 
-    * Your machine can break and if often does for some students, and so you should have backups.
+    * Your machine can break and it often does for some students, and so you should have backups.
 
     * For this you can use programs such as `scp`, `rsync` and `unison`. Look them up with a search engine.
 
@@ -118,18 +118,19 @@ If you are allowed to attend the lab lecture remotely, please check [remote lab 
 
       `sshfs remote-username@tw.cs.bham.ac.uk: /home/local-username/lab`
 
-      Now magically, your files in the lab are available in the directory `lab` in your local machine. Before switch the machine off or closing your laptop lid, make sure you "umount" this, by ejecting it in the file manager. You can also do with `$ sudo umount ~/lab`.
+      Now magically, your files in the lab are available in the directory `lab` in your local machine. Before switching the machine off or closing your laptop lid, make sure you "umount" this, by ejecting it in the file manager. You can also do this with `$ sudo umount ~/lab`.
 
     * The above linux instructions are almost the same for `MacOS`. There are instructions on  the web.
 
     * In Windows this works differently, but there are instructions on the web.
 
 
-    * The advantage of this approach is that (1) you don't need to synchonize, and (2) the School of Computer Science makes hourly, daily, weekly and monthly backups. Your files won't be lost, even if your machine breaks or the School servers break.
+    * The advantage of this approach is that (1) you don't need to synchronize, and (2) the School of Computer Science makes hourly, daily, weekly and monthly backups. Your files won't be lost, even if your machine breaks or the School servers break.
 
     * You can easily access the hourly, daily, weekly and monthly backups in the hidden directory `.snapshots`. Try this with
 
-      `$ ls ~/.snapshot`
+      `$ ls ~/.snapshot` in the lab, or
+      `$ ls ~/lab/.snapshot` in your machine if you are using `sshfs`.
 
  1. Now let's edit our first Agda file from the terminal.
 
