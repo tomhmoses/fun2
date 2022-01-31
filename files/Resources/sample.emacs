@@ -30,9 +30,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(agda2-highlight-datatype-face ((t (:foreground "color-32"))))
- '(agda2-highlight-function-face ((t (:foreground "color-27"))))
- '(agda2-highlight-keyword-face ((t (:foreground "color-214"))))
+ '(agda2-highlight-function-face ((t (:foreground "color-32"))))
+ '(agda2-highlight-keyword-face ((t (:foreground "color-216"))))
+ '(agda2-highlight-module-face ((t (:foreground "color-135"))))
+ '(agda2-highlight-number-face ((t (:foreground "color-135"))))
  '(agda2-highlight-primitive-face ((t (:foreground "color-32"))))
+ '(agda2-highlight-symbol-face ((t (:foreground "brightcyan"))))
+ '(font-lock-comment-face ((t (:foreground "brightred"))))
  '(highlight ((t (:background "color-236"))))
  '(minibuffer-prompt ((t (:foreground "brightmagenta"))))
  '(widget-field ((t (:background "color-241" :foreground "black")))))
